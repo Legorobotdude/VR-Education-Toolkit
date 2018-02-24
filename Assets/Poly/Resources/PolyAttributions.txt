@@ -1,13 +1,31 @@
 This project uses the following items from Poly (http://poly.google.com):
 
-Title: Erlenmeyer flask
+Title: Balloon
 Author: Poly by Google
-URL: https://poly.google.com/view/advGpqPqy0P
+URL: https://poly.google.com/view/d1gDDhM7pTf
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Balloon
+Author: Poly by Google
+URL: https://poly.google.com/view/5eJ1LoekHuW
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Coffee plant
+Author: Poly by Google
+URL: https://poly.google.com/view/dam5c-OPC8w
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
 Title: Science Tubes
 Author: Ryan Donaldson
 URL: https://poly.google.com/view/6TUXVb_x88c
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Ugandan Knuckles TheWaveVR
+Author: Evol Love
+URL: https://poly.google.com/view/d8tWY66WIvS
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
