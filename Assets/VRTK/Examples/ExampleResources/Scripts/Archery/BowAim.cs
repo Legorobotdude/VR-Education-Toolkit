@@ -28,6 +28,8 @@
         private float currentPull;
         private float previousPull;
 
+        private AudioSource source;
+
         public VRTK_InteractGrab GetPullHand()
         {
             return stringControl;
@@ -46,14 +48,24 @@
         public void SetArrow(GameObject arrow)
         {
             currentArrow = arrow;
+            PlaySound();
         }
 
         private void Start()
         {
+            source = GetComponent<AudioSource>();
             bowAnimation = GetComponent<BowAnimation>();
             handle = GetComponentInChildren<BowHandle>();
             interact = GetComponent<VRTK_InteractableObject>();
             interact.InteractableObjectGrabbed += new InteractableObjectEventHandler(DoObjectGrab);
+        }
+
+        private void PlaySound()
+        {
+            if (source != null && !source.isPlaying)
+            {
+                source.Play();
+            }
         }
 
         private void DoObjectGrab(object sender, InteractableObjectEventArgs e)
@@ -99,7 +111,7 @@
                     fired = false;
                     fireOffset = Time.time;
                 }
-                if (!releaseRotation.Equals(baseRotation))
+                if (releaseRotation != baseRotation)
                 {
                     transform.localRotation = Quaternion.Lerp(releaseRotation, baseRotation, (Time.time - fireOffset) * 8);
                 }
@@ -161,7 +173,7 @@
             currentPull = Mathf.Clamp((Vector3.Distance(holdControl.transform.position, stringControl.transform.position) - pullOffset) * pullMultiplier, 0, maxPullDistance);
             bowAnimation.SetFrame(currentPull);
 
-            if (!currentPull.ToString("F2").Equals(previousPull.ToString("F2")))
+            if (currentPull.ToString("F2") != previousPull.ToString("F2"))
             {
                 VRTK_ControllerHaptics.TriggerHapticPulse(VRTK_ControllerReference.GetControllerReference(holdControl.gameObject), bowVibration);
                 VRTK_ControllerHaptics.TriggerHapticPulse(VRTK_ControllerReference.GetControllerReference(stringControl.gameObject), stringVibration);

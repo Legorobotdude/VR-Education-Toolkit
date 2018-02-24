@@ -915,7 +915,7 @@ Prefab:
     - target: {fileID: 224072763462615904, guid: 7a6c766f373f01a409097d91a307ac14,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 626
+      value: 1839
       objectReference: {fileID: 0}
     - target: {fileID: 224072763462615904, guid: 7a6c766f373f01a409097d91a307ac14,
         type: 2}
@@ -931,6 +931,30 @@ Prefab:
         type: 2}
       propertyPath: m_SizeDelta.y
       value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516521440531000, guid: 7a6c766f373f01a409097d91a307ac14, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114050316368439426, guid: 7a6c766f373f01a409097d91a307ac14,
+        type: 2}
+      propertyPath: cachedSystemSDKInfo.descriptionIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114050316368439426, guid: 7a6c766f373f01a409097d91a307ac14,
+        type: 2}
+      propertyPath: cachedBoundariesSDKInfo.descriptionIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114050316368439426, guid: 7a6c766f373f01a409097d91a307ac14,
+        type: 2}
+      propertyPath: cachedHeadsetSDKInfo.descriptionIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114050316368439426, guid: 7a6c766f373f01a409097d91a307ac14,
+        type: 2}
+      propertyPath: cachedControllerSDKInfo.descriptionIndex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a6c766f373f01a409097d91a307ac14, type: 2}
