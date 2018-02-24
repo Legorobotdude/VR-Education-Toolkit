@@ -1,0 +1,13 @@
+This project uses the following items from Poly (http://poly.google.com):
+
+Title: Erlenmeyer flask
+Author: Poly by Google
+URL: https://poly.google.com/view/advGpqPqy0P
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Science Tubes
+Author: Ryan Donaldson
+URL: https://poly.google.com/view/6TUXVb_x88c
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
