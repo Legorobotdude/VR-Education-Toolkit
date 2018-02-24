@@ -11,6 +11,10 @@
 /Assets/ProCore.meta
 /Assets/Plugins/Android/
 /Assets/Plugins/Android.meta
+/Assets/OVR/
+/Assets/OVR.meta
+/Assets/Plugins/OVRGamepad.bundle/
+/Assets/Plugins/OVRGamepad.bundle.meta
 
 # Visual Studio 2015 cache directory
 /.vs/
