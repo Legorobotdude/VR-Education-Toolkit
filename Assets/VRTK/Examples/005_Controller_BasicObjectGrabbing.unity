@@ -337,7 +337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &365483937
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -603,7 +603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947b27445602ed640b885db7e667dfc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabButton: 7
+  grabButton: 4
   grabPrecognition: 0
   throwMultiplier: 1
   createRigidBodyWhenNotTouching: 0
@@ -1420,7 +1420,7 @@ Prefab:
     - target: {fileID: 224562845145320040, guid: 7a6c766f373f01a409097d91a307ac14,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 1839
+      value: 214
       objectReference: {fileID: 0}
     - target: {fileID: 224562845145320040, guid: 7a6c766f373f01a409097d91a307ac14,
         type: 2}
@@ -2574,6 +2574,11 @@ Prefab:
     - target: {fileID: 114187160988829718, guid: 25759c4f543dfcc47a4592299d7f6ff3,
         type: 2}
       propertyPath: enableTeleport
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114187160988829718, guid: 25759c4f543dfcc47a4592299d7f6ff3,
+        type: 2}
+      propertyPath: holdButtonToActivate
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
