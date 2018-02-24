@@ -7,6 +7,10 @@
 /Assets/AssetStoreTools*
 /Assets/Plugins/GitHub.meta
 /Assets/Plugins/GitHub/
+/Assets/PolyToolkit/
+/Assets/PolyToolkit.meta
+/Assets/ProCore
+/Assets/ProCore.meta
 
 # Visual Studio 2015 cache directory
 /.vs/
