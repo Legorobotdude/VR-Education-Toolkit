@@ -592,6 +592,36 @@ Transform:
   m_PrefabParentObject: {fileID: 4345987484476062, guid: 25759c4f543dfcc47a4592299d7f6ff3,
     type: 2}
   m_PrefabInternal: {fileID: 2023671851}
+--- !u!114 &434101906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 434101904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947b27445602ed640b885db7e667dfc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabButton: 7
+  grabPrecognition: 0
+  throwMultiplier: 1
+  createRigidBodyWhenNotTouching: 0
+  controllerAttachPoint: {fileID: 0}
+  controllerEvents: {fileID: 0}
+  interactTouch: {fileID: 0}
+--- !u!114 &434101907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 434101904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64e104da36bd3b04b90c6ae969ac66dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customColliderContainer: {fileID: 0}
 --- !u!1 &502583062
 GameObject:
   m_ObjectHideFlags: 0
@@ -2540,6 +2570,11 @@ Prefab:
         type: 2}
       propertyPath: grabToPointerTip
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114187160988829718, guid: 25759c4f543dfcc47a4592299d7f6ff3,
+        type: 2}
+      propertyPath: enableTeleport
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25759c4f543dfcc47a4592299d7f6ff3, type: 2}
