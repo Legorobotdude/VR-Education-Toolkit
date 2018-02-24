@@ -532,7 +532,7 @@ Transform:
   m_Children:
   - {fileID: 1625156621}
   - {fileID: 1893655637}
-  - {fileID: 1839239517}
+  - {fileID: 967405230}
   - {fileID: 1969393191}
   - {fileID: 2042439127}
   - {fileID: 380662309}
@@ -1004,7 +1004,7 @@ Prefab:
     - target: {fileID: 224562845145320040, guid: 7a6c766f373f01a409097d91a307ac14,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -70
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224562845145320040, guid: 7a6c766f373f01a409097d91a307ac14,
         type: 2}
@@ -1014,7 +1014,7 @@ Prefab:
     - target: {fileID: 224562845145320040, guid: 7a6c766f373f01a409097d91a307ac14,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 120
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114094081158362508, guid: 7a6c766f373f01a409097d91a307ac14,
         type: 2}
@@ -1507,6 +1507,35 @@ MonoBehaviour:
   objectHighlighter: {fileID: 0}
   touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   usingState: 0
+--- !u!1 &967405229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1839239516}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 967405230}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &967405230
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1839239516}
+  m_GameObject: {fileID: 967405229}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1839239517}
+  m_Father: {fileID: 61331015}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1145629433 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 3a9f9008ec10587499da7e918f974887, type: 3}
@@ -1522,7 +1551,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -1648,6 +1677,21 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8788affdb7c7dce44bf0cb62d760a87c, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1317770637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1839239516}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1839239517}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1399132411 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 57d4ccaa6ac86004abeba5d67b53ece9, type: 3}
@@ -2096,7 +2140,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh17714
+  m_Name: pb_Mesh18458
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -2414,10 +2458,19 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4c6e18c10994ff4dad5d68c3ab2952a, type: 3}
   m_IsPrefabParent: 0
---- !u!4 &1839239517 stripped
+--- !u!4 &1839239517
 Transform:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 1839239516}
+  m_GameObject: {fileID: 1317770637}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 967405230}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1842901868
 Prefab:
   m_ObjectHideFlags: 0
@@ -2563,7 +2616,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014ef8a0264415a40be6ff5d61a2c2ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
 --- !u!1 &1863820170
 GameObject:
   m_ObjectHideFlags: 0
@@ -2838,7 +2890,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1502e94c97086a4883e55fc08971c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
 --- !u!1 &2139917890
 GameObject:
   m_ObjectHideFlags: 0
