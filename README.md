@@ -15,4 +15,4 @@ Import [Oculus Utilities for Unity](https://developer.oculus.com/downloads/packa
 
 Enter Youtube link into [KeepVid](https://keepvid.com/ "keepvid") to download the 360 video. Add the .mp4 int the "Video" scene asset.
 Example:
-![alt text](/Images/360cap "360 Video")
+![alt text](/Images/360cap.png "360 Video")
