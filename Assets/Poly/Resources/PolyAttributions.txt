@@ -18,6 +18,12 @@ URL: https://poly.google.com/view/dam5c-OPC8w
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
+Title: Drum stick
+Author: Poly by Google
+URL: https://poly.google.com/view/8llOkQCNie_
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
 Title: Science Tubes
 Author: Ryan Donaldson
 URL: https://poly.google.com/view/6TUXVb_x88c
