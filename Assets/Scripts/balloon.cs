@@ -17,9 +17,10 @@ public class balloon : MonoBehaviour {
 	void Update () {
 		
 	}
-	void OnCollisionEnter(Collision collision)
+	void OnTriggerEnter(Collider collision)
     {
-		if (collision.collider.tag == "fire")
+		Debug.Log("enter");
+		if (collision.tag == "fire")
 		{
 			explosionParticles.Play();
 			particles.SetActive(true);
