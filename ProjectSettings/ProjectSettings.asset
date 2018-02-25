@@ -11,7 +11,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: VREducational
   productName: EducationalVRToolkit
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -263,14 +263,17 @@ PlayerSettings:
   m_BuildTargetVRSettings:
   - m_BuildTarget: Standalone
     m_Enabled: 1
-    m_Devices: []
+    m_Devices:
+    - OpenVR
+    - Oculus
+    - None
   - m_BuildTarget: iOS
     m_Enabled: 0
     m_Devices: []
   - m_BuildTarget: Android
     m_Enabled: 1
     m_Devices:
-    - Oculus
+    - Daydream
   - m_BuildTarget: WebGL
     m_Enabled: 0
     m_Devices: []

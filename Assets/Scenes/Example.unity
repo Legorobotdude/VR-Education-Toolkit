@@ -1526,6 +1526,11 @@ MonoBehaviour:
   floorHeightTolerance: 1
   blinkTransitionSpeed: 0.6
   bodyPhysics: {fileID: 0}
+--- !u!1 &393710806 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1064568974428028, guid: b4218694ea13f4249a4c9af7318a6e5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 20481575}
 --- !u!1001 &429952437
 Prefab:
   m_ObjectHideFlags: 0
@@ -2343,7 +2348,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionParticles: {fileID: 9870893}
   particles: {fileID: 2042439128}
-  otherBalloon: {fileID: 2033053861}
+  selfRenderer: {fileID: 393710806}
+  otherBalloon: {fileID: 1905458628}
 --- !u!54 &958817968
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3638,6 +3644,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1905458628 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1020468144107728, guid: ac992d8c9b4cc6e478a2ba86361929ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 125771442}
 --- !u!1 &1935000198 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1077400727496186, guid: a19da12fd3065db4db71a17f1b12e8bd,
@@ -7344,6 +7355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionParticles: {fileID: 1301235374}
   particles: {fileID: 2042439128}
+  selfRenderer: {fileID: 1905458628}
   otherBalloon: {fileID: 958817964}
 --- !u!54 &2033053865
 Rigidbody:

@@ -7,6 +7,7 @@ public class balloon : MonoBehaviour {
 
 	[SerializeField] ParticleSystem explosionParticles;
 	[SerializeField] GameObject particles;
+	[SerializeField] GameObject selfRenderer;
 	[SerializeField] GameObject otherBalloon;
 
 	// Use this for initialization
@@ -14,10 +15,7 @@ public class balloon : MonoBehaviour {
 		
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	
 	void OnTriggerEnter(Collider collision)
     {
 		Debug.Log("enter");
@@ -25,8 +23,9 @@ public class balloon : MonoBehaviour {
 		{
 			explosionParticles.Play();
 			particles.SetActive(true);
-			GetComponent<Renderer>().enabled = false;
+			//GetComponent<Renderer>().enabled = false;
 			otherBalloon.GetComponent<Renderer>().enabled = false;
+			selfRenderer.GetComponent<Renderer>().enabled = false;
 			//gameObject.SetActive(false);
 		}
 	}
