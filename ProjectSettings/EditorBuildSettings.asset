@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/VRTK/Examples/004_CameraRig_BasicTeleport.unity
     guid: 4e1e9f3e596a6ca46aa2e5eeac865fc1
+  - enabled: 0
+    path: Assets/VRTK/Examples/017_CameraRig_TouchpadWalking.unity
+    guid: 976602924483e6d4bbfa2e37b4dcdda6
