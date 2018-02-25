@@ -2343,6 +2343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionParticles: {fileID: 9870893}
   particles: {fileID: 2042439128}
+  otherBalloon: {fileID: 2033053861}
 --- !u!54 &958817968
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3002,7 +3003,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4400280665893788, guid: a19da12fd3065db4db71a17f1b12e8bd, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.534
+      value: -0.53085
       objectReference: {fileID: 0}
     - target: {fileID: 4400280665893788, guid: a19da12fd3065db4db71a17f1b12e8bd, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3034,15 +3035,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4400280665893788, guid: a19da12fd3065db4db71a17f1b12e8bd, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.07239151
+      value: 0.11435055
       objectReference: {fileID: 0}
     - target: {fileID: 4400280665893788, guid: a19da12fd3065db4db71a17f1b12e8bd, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.07239151
+      value: 0.11435058
       objectReference: {fileID: 0}
     - target: {fileID: 4400280665893788, guid: a19da12fd3065db4db71a17f1b12e8bd, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.07239151
+      value: 0.11435058
       objectReference: {fileID: 0}
     - target: {fileID: 4400280665893788, guid: a19da12fd3065db4db71a17f1b12e8bd, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -3756,7 +3757,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 577541511
+  randomSeed: 1745289794
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7343,6 +7344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionParticles: {fileID: 1301235374}
   particles: {fileID: 2042439128}
+  otherBalloon: {fileID: 958817964}
 --- !u!54 &2033053865
 Rigidbody:
   m_ObjectHideFlags: 0

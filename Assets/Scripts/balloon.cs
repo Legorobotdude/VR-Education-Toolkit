@@ -7,6 +7,7 @@ public class balloon : MonoBehaviour {
 
 	[SerializeField] ParticleSystem explosionParticles;
 	[SerializeField] GameObject particles;
+	[SerializeField] GameObject otherBalloon;
 
 	// Use this for initialization
 	void Start () {
@@ -24,7 +25,9 @@ public class balloon : MonoBehaviour {
 		{
 			explosionParticles.Play();
 			particles.SetActive(true);
-			gameObject.SetActive(false);
+			GetComponent<Renderer>().enabled = false;
+			otherBalloon.GetComponent<Renderer>().enabled = false;
+			//gameObject.SetActive(false);
 		}
 	}
 
