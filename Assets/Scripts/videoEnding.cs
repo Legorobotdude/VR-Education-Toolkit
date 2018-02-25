@@ -6,7 +6,7 @@ using UnityEngine.Video;
 
 public class videoEnding : MonoBehaviour {
 
-	public float endingTime = 100f;
+	public double endingTime = 100;
 	public GameObject sceneObjects;
 	//Component videoPlayer;
 	 private VideoPlayer videoPlayer;
@@ -23,7 +23,7 @@ public class videoEnding : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 			
-		if (videoPlayer.time == endingTime)
+		if (videoPlayer.time >= endingTime)
 		{
 			sceneObjects.SetActive(true);
 		}
