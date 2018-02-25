@@ -1,5 +1,7 @@
 # VR-Education-Toolkit
 
+https://vr-education-toolkit.azurewebsites.net
+
 A toolkit to help educators create VR experiences. (Derived from VRTK)
 This toolkit provides a framework as well as resources for educators to create VR lessons with. Precreated Unity scenes can be modified by content creators to suit their lesson with new assets and 360 videos.
 
@@ -16,3 +18,9 @@ Import [Oculus Utilities for Unity](https://developer.oculus.com/downloads/packa
 Enter Youtube link into [KeepVid](https://keepvid.com/ "keepvid") to download the 360 video. Add the .mp4 int the "Video" scene asset.
 Example:
 ![Screenshot](https://github.com/Legorobotdude/VR-Education-Toolkit/blob/master/Images/360cap.PNG "360 Video")
+
+### Planned Features
+
+Additional example scenes
+Asset packs for more subjects
+Add windows to classroom
