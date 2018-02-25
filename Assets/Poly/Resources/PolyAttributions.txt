@@ -30,9 +30,21 @@ URL: https://poly.google.com/view/8llOkQCNie_
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
+Title: Energy Of Flowers
+Author: Jacob
+URL: https://poly.google.com/view/7oxkJuGeUvQ
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
 Title: Fish Tank 🎏
 Author: Chris Ross
 URL: https://poly.google.com/view/2Rb9zxgkDEM
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Hot Dog Meme
+Author: Ben Malone
+URL: https://poly.google.com/view/cevALRwCDsV
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
@@ -42,9 +54,21 @@ URL: https://poly.google.com/view/2aH4y6SWnXz
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
+Title: Kidneys
+Author: Poly by Google
+URL: https://poly.google.com/view/fF04IGr3X6q
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
 Title: Monster Captus
 Author: Cappie Regalado
 URL: https://poly.google.com/view/6Xd-zf5zCGu
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Organic Processor
+Author: Zaw Imagineering
+URL: https://poly.google.com/view/6HepOjGMgj4
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
@@ -69,6 +93,12 @@ https://creativecommons.org/licenses/by/3.0/legalcode
 Title: Science Tubes
 Author: Ryan Donaldson
 URL: https://poly.google.com/view/6TUXVb_x88c
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Tree 2
+Author: S. Paul Michael
+URL: https://poly.google.com/view/98eueVrLF_r
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
