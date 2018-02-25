@@ -1,5 +1,11 @@
 This project uses the following items from Poly (http://poly.google.com):
 
+Title: "A work in Progress" Prototype
+Author: Giovanna Coronado
+URL: https://poly.google.com/view/318KvXkYSNq
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
 Title: Balloon
 Author: Poly by Google
 URL: https://poly.google.com/view/d1gDDhM7pTf
@@ -15,6 +21,12 @@ https://creativecommons.org/licenses/by/3.0/legalcode
 Title: Bonsai Prayer Tree
 Author: JoshNegreanu
 URL: https://poly.google.com/view/5Qfe1GZlrYg
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Cell
+Author: Shank Memes Fart
+URL: https://poly.google.com/view/0nm3-hQpeRi
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
@@ -96,6 +108,12 @@ URL: https://poly.google.com/view/6TUXVb_x88c
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
+Title: Skull 01 TheWaveVR
+Author: Evol Love
+URL: https://poly.google.com/view/3SRO1k1Brxe
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
 Title: Tree 2
 Author: S. Paul Michael
 URL: https://poly.google.com/view/98eueVrLF_r
@@ -105,5 +123,11 @@ https://creativecommons.org/licenses/by/3.0/legalcode
 Title: Ugandan Knuckles TheWaveVR
 Author: Evol Love
 URL: https://poly.google.com/view/d8tWY66WIvS
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: White blood cell
+Author: Poly by Google
+URL: https://poly.google.com/view/aoZ4DjiO35h
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
