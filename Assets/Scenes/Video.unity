@@ -482,6 +482,26 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114427678441018970, guid: 7a6c766f373f01a409097d91a307ac14,
+        type: 2}
+      propertyPath: cachedSystemSDKInfo.descriptionIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114427678441018970, guid: 7a6c766f373f01a409097d91a307ac14,
+        type: 2}
+      propertyPath: cachedBoundariesSDKInfo.descriptionIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114427678441018970, guid: 7a6c766f373f01a409097d91a307ac14,
+        type: 2}
+      propertyPath: cachedHeadsetSDKInfo.descriptionIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114427678441018970, guid: 7a6c766f373f01a409097d91a307ac14,
+        type: 2}
+      propertyPath: cachedControllerSDKInfo.descriptionIndex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a6c766f373f01a409097d91a307ac14, type: 2}
   m_IsPrefabParent: 0
