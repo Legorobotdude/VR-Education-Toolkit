@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class balloon : MonoBehaviour {
 
+
+	[SerializeField] ParticleSystem explosionParticles;
+	[SerializeField] GameObject particles;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -15,7 +19,12 @@ public class balloon : MonoBehaviour {
 	}
 	void OnCollisionEnter(Collision collision)
     {
-		
+		if (collision.collider.tag == "fire")
+		{
+			explosionParticles.Play();
+			particles.SetActive(true);
+			gameObject.SetActive(false);
+		}
 	}
 
 }
