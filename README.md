@@ -23,3 +23,4 @@ Example:
 
 Additional example scenes
 Asset packs for more subjects
+Add windows to classroom
