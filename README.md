@@ -2,6 +2,8 @@
 
 https://vr-education-toolkit.azurewebsites.net
 
+https://www.youtube.com/watch?v=klmyJWjXgcw
+
 A toolkit to help educators create VR experiences. (Derived from VRTK)
 This toolkit provides a framework as well as resources for educators to create VR lessons with. Precreated Unity scenes can be modified by content creators to suit their lesson with new assets and 360 videos.
 
