@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class balloon : MonoBehaviour {
+public class collisionEvent : MonoBehaviour {
 
 
 	[SerializeField] ParticleSystem explosionParticles;
@@ -18,7 +18,7 @@ public class balloon : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider collision)
     {
-		Debug.Log("enter");
+		
 		if (collision.tag == "fire")
 		{
 			explosionParticles.Play();
