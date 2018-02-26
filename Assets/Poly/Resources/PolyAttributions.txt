@@ -114,6 +114,12 @@ URL: https://poly.google.com/view/3SRO1k1Brxe
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
+Title: Spiral Book
+Author: Navneet Saini
+URL: https://poly.google.com/view/1dF0D9MpRmb
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
 Title: Tree 2
 Author: S. Paul Michael
 URL: https://poly.google.com/view/98eueVrLF_r
