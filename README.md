@@ -1,5 +1,7 @@
 # VR-Education-Toolkit
 
+![Screenshot](https://github.com/Legorobotdude/VR-Education-Toolkit/blob/master/Images/hackil18.3.png "Screenshot")
+
 https://vr-education-toolkit.azurewebsites.net
 
 https://www.youtube.com/watch?v=klmyJWjXgcw
