@@ -9,7 +9,7 @@ This toolkit provides a framework as well as resources for educators to create V
 
 ## Getting Started
 
-See GETTING_STARTED.md for more details
+See [GETTING_STARTED.md](GETTING_STARTED.md) for more details
 
 ### Prerequisites
 
