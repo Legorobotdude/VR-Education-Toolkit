@@ -5,27 +5,33 @@ using UnityEngine;
 public class collisionEvent : MonoBehaviour {
 
 
-	[SerializeField] ParticleSystem explosionParticles;
-	[SerializeField] GameObject particles;
-	[SerializeField] GameObject selfRenderer;
-	[SerializeField] GameObject otherBalloon;
-
-	// Use this for initialization
-	void Start () {
 		
-	}
+    [SerializeField] GameObject[] objectsToDeactivate;
+    [SerializeField] GameObject[] objectsToActivate;
+    [SerializeField] string tagToInteract;
+    bool flag = false;
+
 	
 	
 	void OnTriggerEnter(Collider collision)
     {
 		
-		if (collision.tag == "fire")
+		if (collision.tag == tagToInteract && flag == false)
 		{
-			explosionParticles.Play();
-			particles.SetActive(true);
+            flag = true;
+            for (int i = 0; i < objectsToDeactivate.Length; i++)
+            {
+                objectsToDeactivate[i].SetActive(false);
+            }
+            for (int i = 0; i < objectsToActivate.Length; i++)
+            {
+                objectsToActivate[i].SetActive(true);
+            }
+            
+			//particles.SetActive(true);
 			//GetComponent<Renderer>().enabled = false;
-			otherBalloon.GetComponent<Renderer>().enabled = false;
-			selfRenderer.GetComponent<Renderer>().enabled = false;
+			//otherBalloon.GetComponent<Renderer>().enabled = false;
+			//selfRenderer.GetComponent<Renderer>().enabled = false;
 			//gameObject.SetActive(false);
 		}
 	}
