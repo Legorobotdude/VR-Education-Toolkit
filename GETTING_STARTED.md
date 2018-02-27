@@ -12,4 +12,4 @@ Select Poly in the file menu, and click browse assets. From there you can search
 
 ### Setting up new scenes
 
-Click File - New Scene, and drag in the Room prefab from the Prefabs folder. Then drag in the [VRTK_SDKManager] prefab and the Controller prefab. Set the right controller variable of the [VRTK_SDKManager] to the controller you just made.
+Click File - New Scene, and drag in the Room prefab from the Prefabs folder. Then drag in the [VRTK_SDKManager] prefab and the RightController prefab. Set the Right Controller variable of the [VRTK_SDKManager] to the controller you just made.
