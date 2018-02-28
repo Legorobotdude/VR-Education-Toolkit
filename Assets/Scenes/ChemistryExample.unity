@@ -1084,12 +1084,12 @@ Prefab:
     - target: {fileID: 224562845145320040, guid: 7a6c766f373f01a409097d91a307ac14,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 1127
+      value: 629
       objectReference: {fileID: 0}
     - target: {fileID: 224562845145320040, guid: 7a6c766f373f01a409097d91a307ac14,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -70
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224562845145320040, guid: 7a6c766f373f01a409097d91a307ac14,
         type: 2}
@@ -1099,7 +1099,7 @@ Prefab:
     - target: {fileID: 224562845145320040, guid: 7a6c766f373f01a409097d91a307ac14,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 120
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114094081158362508, guid: 7a6c766f373f01a409097d91a307ac14,
         type: 2}
@@ -2459,7 +2459,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 958817964}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 142.06
@@ -4262,7 +4262,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2033053861}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.2
@@ -4381,6 +4381,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 13
+  xAxis: 0
+  yAxis: 1
+  zAxis: 0
 --- !u!1 &2126033528
 GameObject:
   m_ObjectHideFlags: 0
