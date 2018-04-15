@@ -13,6 +13,8 @@ This toolkit provides a framework as well as resources for educators to create V
 
 See [GETTING_STARTED.md](GETTING_STARTED.md) for more details
 
+See the [Wiki](https://github.com/Legorobotdude/VR-Education-Toolkit/wiki) for more information
+
 ### Prerequisites
 
 Import [ProBuilder](https://assetstore.unity.com/packages/tools/modeling/probuilder-111418 "probuilder") from the Unity Asset Store.
