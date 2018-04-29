@@ -262,15 +262,15 @@ namespace VRTK
         {
             if (string.IsNullOrEmpty(gameObjectName))
             {
-                T foundComponent = FindEvenInactiveComponentsInLoadedScenes<T>(searchAllScenes, true).FirstOrDefault();
+                T foundComponent = FindEvenInactiveComponentsInValidScenes<T>(searchAllScenes, true).FirstOrDefault();
                 return foundComponent == null ? null : foundComponent.gameObject;
             }
 
-            return FindEvenInactiveComponentsInLoadedScenes<T>(searchAllScenes)
-                       .Select(component => 
+            return FindEvenInactiveComponentsInValidScenes<T>(searchAllScenes)
+                       .Select(component =>
                        {
-                            Transform transform = component.gameObject.transform.Find(gameObjectName);
-                            return transform == null ? null : transform.gameObject;
+                           Transform transform = component.gameObject.transform.Find(gameObjectName);
+                           return transform == null ? null : transform.gameObject;
                        })
                        .FirstOrDefault(gameObject => gameObject != null);
         }
@@ -287,7 +287,7 @@ namespace VRTK
         /// <returns>All the found components. If no component is found an empty array is returned.</returns>
         public static T[] FindEvenInactiveComponents<T>(bool searchAllScenes = false) where T : Component
         {
-            IEnumerable<T> results = FindEvenInactiveComponentsInLoadedScenes<T>(searchAllScenes);
+            IEnumerable<T> results = FindEvenInactiveComponentsInValidScenes<T>(searchAllScenes);
             return results.ToArray();
         }
 
@@ -303,7 +303,7 @@ namespace VRTK
         /// <returns>The found component. If no component is found `null` is returned.</returns>
         public static T FindEvenInactiveComponent<T>(bool searchAllScenes = false) where T : Component
         {
-            return FindEvenInactiveComponentsInLoadedScenes<T>(searchAllScenes, true).FirstOrDefault();
+            return FindEvenInactiveComponentsInValidScenes<T>(searchAllScenes, true).FirstOrDefault();
         }
 
         /// <summary>
@@ -562,6 +562,7 @@ namespace VRTK
             {
                 return type;
             }
+#if !UNITY_WSA
             Assembly[] foundAssemblies = AppDomain.CurrentDomain.GetAssemblies();
             for (int i = 0; i < foundAssemblies.Length; i++)
             {
@@ -571,6 +572,7 @@ namespace VRTK
                     return type;
                 }
             }
+#endif
             return null;
         }
 
@@ -600,6 +602,154 @@ namespace VRTK
 #endif
         }
 
+        /// <summary>
+        /// The IsTypeSubclassOf checks if a given Type is a subclass of another given Type.
+        /// </summary>
+        /// <param name="givenType">The Type to check.</param>
+        /// <param name="givenBaseType">The base Type to check.</param>
+        /// <returns>Returns `true` if the given type is a subclass of the given base type.</returns>
+        public static bool IsTypeSubclassOf(Type givenType, Type givenBaseType)
+        {
+#if UNITY_WSA && !UNITY_EDITOR
+            return (givenType.GetTypeInfo().IsSubclassOf(givenBaseType));
+#else
+            return (givenType.IsSubclassOf(givenBaseType));
+#endif
+        }
+
+        /// <summary>
+        /// The GetTypeCustomAttributes method gets the custom attributes of a given type.
+        /// </summary>
+        /// <param name="givenType">The type to get the custom attributes for.</param>
+        /// <param name="attributeType">The attribute type.</param>
+        /// <param name="inherit">Whether to inherit attributes.</param>
+        /// <returns>Returns an object array of custom attributes.</returns>
+        public static object[] GetTypeCustomAttributes(Type givenType, Type attributeType, bool inherit)
+        {
+#if UNITY_WSA && !UNITY_EDITOR
+            return ((object[])givenType.GetTypeInfo().GetCustomAttributes(attributeType, inherit));
+#else
+            return (givenType.GetCustomAttributes(attributeType, inherit));
+#endif
+        }
+
+        /// <summary>
+        /// The GetBaseType method returns the base Type for the given Type.
+        /// </summary>
+        /// <param name="givenType">The type to return the base Type for.</param>
+        /// <returns>Returns the base Type.</returns>
+        public static Type GetBaseType(Type givenType)
+        {
+#if UNITY_WSA && !UNITY_EDITOR
+            return (givenType.GetTypeInfo().BaseType);
+#else
+            return (givenType.BaseType);
+#endif
+        }
+
+        /// <summary>
+        /// The IsTypeAssignableFrom method determines if the given Type is assignable from the source Type.
+        /// </summary>
+        /// <param name="givenType">The Type to check on.</param>
+        /// <param name="sourceType">The Type to check if the given Type is assignable from.</param>
+        /// <returns>Returns `true` if the given Type is assignable from the source Type.</returns>
+        public static bool IsTypeAssignableFrom(Type givenType, Type sourceType)
+        {
+#if UNITY_WSA && !UNITY_EDITOR
+            return (givenType.GetTypeInfo().IsAssignableFrom(sourceType.GetTypeInfo()));
+#else
+            return (givenType.IsAssignableFrom(sourceType));
+#endif
+        }
+
+        /// <summary>
+        /// The GetNestedType method returns the nested Type of the given Type.
+        /// </summary>
+        /// <param name="givenType">The Type to check on.</param>
+        /// <param name="name">The name of the nested Type.</param>
+        /// <returns>Returns the nested Type.</returns>
+        public static Type GetNestedType(Type givenType, string name)
+        {
+#if UNITY_WSA && !UNITY_EDITOR
+            return (givenType.GetTypeInfo().GetDeclaredNestedType(name).GetType());
+#else
+            return (givenType.GetNestedType(name));
+#endif
+        }
+
+        /// <summary>
+        /// The GetPropertyFirstName method returns the string name of the first property on a given Type.
+        /// </summary>
+        /// <typeparam name="T">The type to check the first property on.</typeparam>
+        /// <returns>Returns a string representation of the first property name for the given Type.</returns>
+        public static string GetPropertyFirstName<T>()
+        {
+#if UNITY_WSA && !UNITY_EDITOR
+            return (typeof(T).GetTypeInfo().DeclaredProperties.First().Name);
+#else
+            return (typeof(T).GetProperties()[0].Name);
+#endif
+        }
+
+        /// <summary>
+        /// The GetCommandLineArguements method returns the command line arguements for the environment.
+        /// </summary>
+        /// <returns>Returns an array of command line arguements as strings.</returns>
+        public static string[] GetCommandLineArguements()
+        {
+#if UNITY_WSA && !UNITY_EDITOR
+            return new string[0];
+#else
+
+            return Environment.GetCommandLineArgs();
+#endif
+        }
+
+        /// <summary>
+        /// The GetTypesOfType method returns an array of Types for the given Type.
+        /// </summary>
+        /// <param name="givenType">The Type to check on.</param>
+        /// <returns>An array of Types found.</returns>
+        public static Type[] GetTypesOfType(Type givenType)
+        {
+#if UNITY_WSA && !UNITY_EDITOR
+            return givenType.GetTypeInfo().Assembly.GetTypes();
+#else
+
+            return givenType.Assembly.GetTypes();
+#endif
+        }
+
+        /// <summary>
+        /// The GetExportedTypesOfType method returns an array of Exported Types for the given Type.
+        /// </summary>
+        /// <param name="givenType">The Type to check on.</param>
+        /// <returns>An array of Exported Types found.</returns>
+        public static Type[] GetExportedTypesOfType(Type givenType)
+        {
+#if UNITY_WSA && !UNITY_EDITOR
+            return givenType.GetTypeInfo().Assembly.GetExportedTypes();
+#else
+
+            return givenType.Assembly.GetExportedTypes();
+#endif
+        }
+
+        /// <summary>
+        /// The IsTypeAbstract method determines if a given Type is abstract.
+        /// </summary>
+        /// <param name="givenType">The Type to check on.</param>
+        /// <returns>Returns `true` if the given type is abstract.</returns>
+        public static bool IsTypeAbstract(Type givenType)
+        {
+#if UNITY_WSA && !UNITY_EDITOR
+            return givenType.GetTypeInfo().IsAbstract;
+#else
+
+            return givenType.IsAbstract;
+#endif
+        }
+
 #if UNITY_EDITOR
         public static BuildTargetGroup[] GetValidBuildTargetGroups()
         {
@@ -612,8 +762,14 @@ namespace VRTK
 
                 string targetGroupName = Enum.GetName(typeof(BuildTargetGroup), group);
                 FieldInfo targetGroupFieldInfo = typeof(BuildTargetGroup).GetField(targetGroupName, BindingFlags.Public | BindingFlags.Static);
-
-                return targetGroupFieldInfo != null && targetGroupFieldInfo.GetCustomAttributes(typeof(ObsoleteAttribute), false).Length == 0;
+                bool validReturn = (targetGroupFieldInfo != null && targetGroupFieldInfo.GetCustomAttributes(typeof(ObsoleteAttribute), false).Length == 0);
+#if UNITY_WSA
+                if (targetGroupName == "Metro" || targetGroupName == "WSA")
+                {
+                    validReturn = (targetGroupFieldInfo != null);
+                }
+#endif
+                return validReturn;
             }).ToArray();
         }
 #endif
@@ -625,34 +781,52 @@ namespace VRTK
         /// <param name="searchAllScenes">If true, will search all loaded scenes, otherwise just the active scene.</param>
         /// <param name="stopOnMatch">If true, will stop searching objects as soon as a match is found.</param>
         /// <returns></returns>
-        private static IEnumerable<T> FindEvenInactiveComponentsInLoadedScenes<T>(bool searchAllScenes, bool stopOnMatch = false) where T : Component
+        private static IEnumerable<T> FindEvenInactiveComponentsInValidScenes<T>(bool searchAllScenes, bool stopOnMatch = false) where T : Component
+        {
+            IEnumerable<T> results;
+            if (searchAllScenes)
+            {
+                List<T> allSceneResults = new List<T>();
+                for (int sceneIndex = 0; sceneIndex < SceneManager.sceneCount; sceneIndex++)
+                {
+                    allSceneResults.AddRange(FindEventInactiveComponentsInScene<T>(SceneManager.GetSceneAt(sceneIndex), stopOnMatch));
+                }
+                results = allSceneResults;
+            }
+            else
+            {
+                results = FindEventInactiveComponentsInScene<T>(SceneManager.GetActiveScene(), stopOnMatch);
+            }
+
+            return results;
+        }
+
+        /// <summary>
+        /// The FIndEvenInactiveComponentsInScene method searches the specified scene for components matching the type supplied.
+        /// </summary>
+        /// <param name="scene">The scene to search. This scene must be valid, either loaded or loading.</param>
+        /// <param name="stopOnMatch">If true, will stop searching objects as soon as a match is found.</param>
+        /// <returns></returns>
+        private static IEnumerable<T> FindEventInactiveComponentsInScene<T>(Scene scene, bool stopOnMatch = false)
         {
             List<T> results = new List<T>();
-
-            for (int sceneIndex = 0; sceneIndex < SceneManager.sceneCount; sceneIndex++)
+            foreach (GameObject rootObject in scene.GetRootGameObjects())
             {
-                Scene scene = SceneManager.GetSceneAt(sceneIndex);
-                if (scene.isLoaded && (searchAllScenes || scene == SceneManager.GetActiveScene()))
+                if (stopOnMatch)
                 {
-                    GameObject[] rootObjects = scene.GetRootGameObjects();
-                    foreach (GameObject rootObject in scene.GetRootGameObjects())
+                    T foundComponent = rootObject.GetComponentInChildren<T>(true);
+                    if (foundComponent != null)
                     {
-                        if (stopOnMatch)
-                        {
-                            T foundComponent = rootObject.GetComponentInChildren<T>(true);
-                            if (foundComponent != null)
-                            {
-                                results.Add(foundComponent);
-                                return results;
-                            }
-                        }
-                        else
-                        {
-                            results.AddRange(rootObject.GetComponentsInChildren<T>(true));
-                        }
+                        results.Add(foundComponent);
+                        return results;
                     }
                 }
+                else
+                {
+                    results.AddRange(rootObject.GetComponentsInChildren<T>(true));
+                }
             }
+
             return results;
         }
     }

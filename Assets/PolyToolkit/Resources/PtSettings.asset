@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a603ca56417194c4fbf2ac70d2c3efd1, type: 3}
   m_Name: PtSettings
   m_EditorClassIdentifier: 
-  playerColorSpace: 0
+  playerColorSpace: 1
   surfaceShaderMaterials:
   - shaderUrl: https://vr.google.com/shaders/w/gvrss/paper.json
     material: {fileID: 2100000, guid: 0e87b49c65463a343a448a556d7d6c3e, type: 2}

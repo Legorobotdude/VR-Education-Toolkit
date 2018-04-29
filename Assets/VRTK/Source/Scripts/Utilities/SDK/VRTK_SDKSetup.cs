@@ -337,7 +337,7 @@ namespace VRTK
                 ReadOnlyCollection<VRTK_SDKInfo> installedSDKInfos = installedSDKInfosList[index];
                 VRTK_SDKInfo currentSDKInfo = currentSDKInfos[index];
 
-                Type baseType = currentSDKInfo.type.BaseType;
+                Type baseType = VRTK_SharedMethods.GetBaseType(currentSDKInfo.type);
                 if (baseType == null)
                 {
                     continue;
@@ -487,13 +487,13 @@ namespace VRTK
                 return string.Format("The fallback {0} SDK is being used because there is no other {0} SDK set in the SDK Setup.", prettyName);
             }
 
-            if (!baseType.IsAssignableFrom(selectedType) || fallbackType.IsAssignableFrom(selectedType))
+            if (!VRTK_SharedMethods.IsTypeAssignableFrom(baseType, selectedType) || VRTK_SharedMethods.IsTypeAssignableFrom(fallbackType, selectedType))
             {
                 string description = string.Format("The fallback {0} SDK is being used despite being set to '{1}'.", prettyName, selectedType.Name);
 
                 if (installedInfos.Select(installedInfo => installedInfo.type).Contains(selectedType))
                 {
-                    return description + " Its needed scripting define symbols are not added. You can click the GameObject with the `VRTK_SDKManager` script attached to it in Edit Mode and choose to automatically let the manager handle the scripting define symbols.";
+                    return description + " Its needed scripting define symbols are not added. You can click the GameObject with the `VRTK_SDKManager` script attached to it in Edit Mode and choose to automatically let the manager handle the scripting define symbols." + VRTK_Logger.GetCommonMessage(VRTK_Logger.CommonMessageKeys.SCRIPTING_DEFINE_SYMBOLS_NOT_FOUND);
                 }
 
                 return description + " The needed vendor SDK isn't installed.";
