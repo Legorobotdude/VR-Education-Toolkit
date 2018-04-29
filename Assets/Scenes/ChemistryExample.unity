@@ -6814,6 +6814,12 @@ MonoBehaviour:
   - {fileID: 1617265394}
   - {fileID: 1796286582}
   tagToInteract: fire
+  EventsOnCollision:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  oneTimeOnlyEvent: 1
 --- !u!54 &958817968
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13464,6 +13470,12 @@ MonoBehaviour:
   - {fileID: 1617265394}
   - {fileID: 1796286582}
   tagToInteract: fire
+  EventsOnCollision:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  oneTimeOnlyEvent: 1
 --- !u!54 &2033053865
 Rigidbody:
   m_ObjectHideFlags: 0

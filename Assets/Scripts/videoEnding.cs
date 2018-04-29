@@ -2,20 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.Events;
 
 
-public class videoEnding : MonoBehaviour {
+public class VideoEnding : MonoBehaviour {
 
-	public double endingTime = 100;
-	public GameObject sceneObjects;
-	//Component videoPlayer;
-	 private VideoPlayer videoPlayer;
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	void Awake()
+    [SerializeField] double endingTime = 100;
+    [SerializeField] GameObject[] objectsToDeactivate;
+    [SerializeField] GameObject[] objectsToActivate;
+	private VideoPlayer videoPlayer;
+    [SerializeField] UnityEvent EventsOnEnding;
+
+
+    void Awake()
 	{
 		  videoPlayer = GetComponent<VideoPlayer> ();
 	}
@@ -25,7 +24,18 @@ public class videoEnding : MonoBehaviour {
 			
 		if (videoPlayer.time >= endingTime)
 		{
-			sceneObjects.SetActive(true);
-		}
+            EventsOnEnding.Invoke();
+
+            for (int i = 0; i < objectsToDeactivate.Length; i++)
+            {
+                objectsToDeactivate[i].SetActive(false);
+            }
+
+            for (int i = 0; i < objectsToActivate.Length; i++)
+            {
+                objectsToActivate[i].SetActive(true);
+            }
+            
+        }
 	}
 }
