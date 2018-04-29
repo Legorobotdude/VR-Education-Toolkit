@@ -6,12 +6,14 @@ https://vr-education-toolkit.azurewebsites.net
 
 https://www.youtube.com/watch?v=klmyJWjXgcw
 
-A toolkit to help educators create VR experiences. (Based on VRTK)
-This toolkit provides a framework as well as resources for educators to create VR lessons with. Precreated Unity scenes can be modified by content creators to suit their lesson with new assets and 360 videos.
+A toolkit to help educators create VR experiences (Based on VRTK).
+This toolkit provides a framework as well as resources for educators to create VR lessons with. Precreated Unity scenes can be modified by content creators to suit their lesson with new assets and 360 videos or new scenes can be easily made with provided prefabs and models from Google Poly.
 
 ## Getting Started
 
 See [GETTING_STARTED.md](GETTING_STARTED.md) for more details
+
+See the [Wiki](https://github.com/Legorobotdude/VR-Education-Toolkit/wiki) for more information
 
 ### Prerequisites
 
