@@ -40,11 +40,7 @@ public class TriggerEvent : MonoBehaviour {
                 objectsToActivate[i].SetActive(true);
             }
             
-			//particles.SetActive(true);
-			//GetComponent<Renderer>().enabled = false;
-			//otherBalloon.GetComponent<Renderer>().enabled = false;
-			//selfRenderer.GetComponent<Renderer>().enabled = false;
-			//gameObject.SetActive(false);
+			
 		}
 	}
 
