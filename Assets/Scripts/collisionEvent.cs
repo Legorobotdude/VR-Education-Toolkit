@@ -15,7 +15,7 @@ public class CollisionEvent : MonoBehaviour {
 	
 	void OnCollisionEnter(Collision collision)
     {
-		
+        Debug.Log(collision.gameObject.tag);
 		if (collision.gameObject.tag == tagToInteract && flag == false)
 		{
             flag = true;
