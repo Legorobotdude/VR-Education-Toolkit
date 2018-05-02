@@ -54,12 +54,6 @@ URL: https://poly.google.com/view/2Rb9zxgkDEM
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
-Title: Hot Dog Meme
-Author: Ben Malone
-URL: https://poly.google.com/view/cevALRwCDsV
-License: Creative Commons CC-BY
-https://creativecommons.org/licenses/by/3.0/legalcode
-
 Title: House plants
 Author: Poly by Google
 URL: https://poly.google.com/view/2aH4y6SWnXz
@@ -96,12 +90,6 @@ URL: https://poly.google.com/view/08S3n7k4TrZ
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
-Title: Santa Dog 1
-Author: Samantha cooper
-URL: https://poly.google.com/view/1x217yexAjk
-License: Creative Commons CC-BY
-https://creativecommons.org/licenses/by/3.0/legalcode
-
 Title: Science Tubes
 Author: Ryan Donaldson
 URL: https://poly.google.com/view/6TUXVb_x88c
@@ -117,12 +105,6 @@ https://creativecommons.org/licenses/by/3.0/legalcode
 Title: Tree 2
 Author: S. Paul Michael
 URL: https://poly.google.com/view/98eueVrLF_r
-License: Creative Commons CC-BY
-https://creativecommons.org/licenses/by/3.0/legalcode
-
-Title: Ugandan Knuckles TheWaveVR
-Author: Evol Love
-URL: https://poly.google.com/view/d8tWY66WIvS
 License: Creative Commons CC-BY
 https://creativecommons.org/licenses/by/3.0/legalcode
 
