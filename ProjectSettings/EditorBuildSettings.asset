@@ -20,6 +20,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/VRTK/LegacyExampleFiles/017_CameraRig_TouchpadWalking.unity
     guid: 976602924483e6d4bbfa2e37b4dcdda6
-  - enabled: 1
+  - enabled: 0
     path: Assets/VRTK/Examples/VRTK_SDKManager_Constructor.unity
     guid: 3fb19ae213a4a4d45bb9ecd245a8fadb

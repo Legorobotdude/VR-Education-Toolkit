@@ -1249,7 +1249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &728068588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1341,12 +1341,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 728068587}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5132578, y: 0.7673461, z: 2.1338277}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.8748234, y: -0.93094724, z: -0.3981099}
   m_LocalScale: {x: 0.25963077, y: 0.25963077, z: 0.25963077}
   m_Children:
   - {fileID: 803262455}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2097517633}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &728068593
@@ -2364,6 +2364,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114220952355797670, guid: e03e11a0b6cbdef489df903e9ad612c8,
+        type: 2}
+      propertyPath: objectsToActivate.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114463385675078742, guid: e03e11a0b6cbdef489df903e9ad612c8,
+        type: 2}
+      propertyPath: objectsToActivate.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4053310481181770, guid: e03e11a0b6cbdef489df903e9ad612c8, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0.3615656
@@ -2394,8 +2404,28 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4053310481181770, guid: e03e11a0b6cbdef489df903e9ad612c8, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114923076669139958, guid: e03e11a0b6cbdef489df903e9ad612c8,
+        type: 2}
+      propertyPath: holdButtonToGrab
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114923076669139958, guid: e03e11a0b6cbdef489df903e9ad612c8,
+        type: 2}
+      propertyPath: grabAttachMechanicScript
+      value: 
+      objectReference: {fileID: 1648846317}
+    - target: {fileID: 114220952355797670, guid: e03e11a0b6cbdef489df903e9ad612c8,
+        type: 2}
+      propertyPath: objectsToActivate.Array.data[3]
+      value: 
+      objectReference: {fileID: 728068587}
+    - target: {fileID: 114463385675078742, guid: e03e11a0b6cbdef489df903e9ad612c8,
+        type: 2}
+      propertyPath: objectsToActivate.Array.data[3]
+      value: 
+      objectReference: {fileID: 728068587}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e03e11a0b6cbdef489df903e9ad612c8, type: 2}
   m_IsPrefabParent: 0
@@ -2606,6 +2636,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.83, y: 0.85, z: 0.4}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1648846316 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1621019550851976, guid: e03e11a0b6cbdef489df903e9ad612c8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1229046321}
+--- !u!114 &1648846317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1648846316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 1
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+  destroyImmediatelyOnThrow: 1
+  breakForce: 1500
 --- !u!43 &1668371613
 Mesh:
   m_ObjectHideFlags: 0
@@ -2879,7 +2933,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4221495716646504, guid: 7090eda0c9afe674abb6ea676a67127f, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7090eda0c9afe674abb6ea676a67127f, type: 2}
@@ -3574,6 +3628,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 895e3ddae0bc5df4bbf58046218aebf5, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &2097517633 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4053310481181770, guid: e03e11a0b6cbdef489df903e9ad612c8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1229046321}
 --- !u!1 &2126033528
 GameObject:
   m_ObjectHideFlags: 0
