@@ -17,13 +17,15 @@ See the [Wiki](https://github.com/Legorobotdude/VR-Education-Toolkit/wiki) for m
 
 ### Prerequisites
 
-Import [ProBuilder](https://assetstore.unity.com/packages/tools/modeling/probuilder-111418 "probuilder") from the Unity Asset Store.
+Please not that currently downloading the project as a .zip seems to not download the .fbx files properly so you may have to use GitHub Desktop or a similiar client to clone the repo.
 
-Import [Oculus Utilities for Unity](https://developer.oculus.com/downloads/package/oculus-utilities-for-unity-5/ "oculus-utilities-for-unity-5").
+Import [Google Poly](https://assetstore.unity.com/packages/templates/systems/poly-toolkit-104464) if you get compile errors.
+
+(Optional) Import [ProBuilder](https://assetstore.unity.com/packages/tools/modeling/probuilder-111418 "probuilder") from the Unity Asset Store.
 
 ### Whats inside
 
-Example.unity - A fleshed out classroom with a interactive experiment
+Example.unity - A fleshed out classroom with an interactive experiment
 
 Video.unity - A 360 video with an interactive followup
 
