@@ -11,8 +11,9 @@ public class CollisionEvent : MonoBehaviour {
     [SerializeField] GameObject[] objectsToActivate;
     [SerializeField] string tagToInteract;
     [SerializeField] UnityEvent EventsOnCollision;
+    [SerializeField] UnityEvent EventsOnReset;
     [SerializeField] bool oneTimeOnlyEvent = true;
-    bool flag = false;
+    bool alreadyHappened = false;
 
 	
 	
@@ -21,11 +22,11 @@ public class CollisionEvent : MonoBehaviour {
         //Debug.Log(collision.gameObject.tag);//Uncomment to get logs of events
         //Debug.Log(collision.gameObject.name);
 
-        if (collision.gameObject.tag == tagToInteract && flag == false)
+        if (collision.gameObject.tag == tagToInteract && alreadyHappened == false)
 		{
             if (oneTimeOnlyEvent)
             {
-                flag = true;
+                alreadyHappened = true;
             }
 
             EventsOnCollision.Invoke();
@@ -42,5 +43,21 @@ public class CollisionEvent : MonoBehaviour {
            
 		}
 	}
+
+    public void Reset()
+    {
+        alreadyHappened = false;
+        EventsOnReset.Invoke();
+
+        for (int i = 0; i < objectsToDeactivate.Length; i++)
+        {
+            objectsToDeactivate[i].SetActive(true);
+        }
+
+        for (int i = 0; i < objectsToActivate.Length; i++)
+        {
+            objectsToActivate[i].SetActive(false);
+        }
+    }
 
 }
