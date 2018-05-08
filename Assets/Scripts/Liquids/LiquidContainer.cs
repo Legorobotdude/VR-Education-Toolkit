@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class LiquidContainer : MonoBehaviour
 {
-
+    [SerializeField] string liquidType = "Water";//todo: liquid and solid interaction
+    [SerializeField] Color color;
     [SerializeField] ParticleSystem liquidParticleSystem;
     [SerializeField] GameObject liquidObject;
     [SerializeField] bool isPourable = true;
@@ -19,6 +20,8 @@ public class LiquidContainer : MonoBehaviour
     private Renderer liquidRend;
     private Material liquidMaterial;
 
+    private float pourRate = 0.1f;//ToDo: This should be calculated every frame by the pour angle
+
     // Use this for initialization
     void Start()
     {
@@ -29,6 +32,7 @@ public class LiquidContainer : MonoBehaviour
         liquidMaterial = liquidRend.material;
 
         //liquidMaterial.SetFloat()
+        //Todo: Set color and level
         //liquidMaterial.shader.propertyToId();
     }
 
@@ -39,9 +43,14 @@ public class LiquidContainer : MonoBehaviour
         {
 
 
-            if (Vector3.Dot(myTransform.up, Vector3.down) > 0)//todo: vary pour rate
+            if ((Vector3.Dot(myTransform.up, Vector3.down) > 0)&&(currentLevel>emptyLevel))//todo: vary pour rate
             {
                 emission.enabled = true;
+                currentLevel -= pourRate;
+                if (currentLevel < emptyLevel)
+                {
+                    currentLevel = emptyLevel;
+                }
             }
             else
             {
