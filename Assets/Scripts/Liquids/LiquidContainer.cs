@@ -5,7 +5,7 @@ using UnityEngine;
 public class LiquidContainer : MonoBehaviour
 {
     [SerializeField] string liquidType = "Water";//todo: liquid and solid interaction
-    [SerializeField] Color color;
+    //[SerializeField] Color color;
     [SerializeField] ParticleSystem liquidParticleSystem;
     [SerializeField] GameObject liquidObject;
     [SerializeField] bool isPourable = true;
@@ -20,7 +20,7 @@ public class LiquidContainer : MonoBehaviour
     private Renderer liquidRend;
     private Material liquidMaterial;
 
-    private float pourRate = 0.1f;//ToDo: This should be calculated every frame by the pour angle
+    private float pourRate = 0.005f;//ToDo: This should be calculated every frame by the pour angle
 
     // Use this for initialization
     void Start()
@@ -29,10 +29,11 @@ public class LiquidContainer : MonoBehaviour
         emission.enabled = false;
         myTransform = transform;
         liquidRend = liquidObject.GetComponent<Renderer>();
-        liquidMaterial = liquidRend.material;
+        liquidMaterial = liquidObject.GetComponent<Renderer>().material;
 
-        //liquidMaterial.SetFloat()
-        //Todo: Set color and level
+        //liquidRend.material.SetColor("_Tint", color); //Doesn't work for some reason
+        liquidRend.material.SetFloat("_FillAmount", currentLevel);
+
         //liquidMaterial.shader.propertyToId();
     }
 
@@ -43,11 +44,11 @@ public class LiquidContainer : MonoBehaviour
         {
 
 
-            if ((Vector3.Dot(myTransform.up, Vector3.down) > 0)&&(currentLevel>emptyLevel))//todo: vary pour rate
+            if ((Vector3.Dot(myTransform.up, Vector3.down) > 0)&&(currentLevel<emptyLevel))//todo: vary pour rate
             {
                 emission.enabled = true;
-                currentLevel -= pourRate;
-                if (currentLevel < emptyLevel)
+                currentLevel += pourRate;
+                if (currentLevel > emptyLevel)
                 {
                     currentLevel = emptyLevel;
                 }
@@ -57,6 +58,7 @@ public class LiquidContainer : MonoBehaviour
                 emission.enabled = false;
             }
 
+            liquidMaterial.SetFloat("_FillAmount", currentLevel);
         }
 
     }
@@ -64,5 +66,10 @@ public class LiquidContainer : MonoBehaviour
     public void SetPourable(bool state)
     {
         isPourable = state;
+    }
+
+    public string GetLiquidType()
+    {
+        return liquidType;
     }
 }
