@@ -1383,6 +1383,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   liquidParticleSystem: {fileID: 1657521802}
   liquidObject: {fileID: 803262450}
+  isPourable: 1
+  filledLevel: 0
+  emptyLevel: 1
+  currentLevel: 1
 --- !u!1001 &759604125
 Prefab:
   m_ObjectHideFlags: 0
