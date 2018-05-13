@@ -1,6 +1,6 @@
 # Contributors
 
-Aditya Bawankule - Programmer
+Aditya Bawankule - Lead Programmer and Maintainer
 adityabawankule@gmail.com
 
 David Hickox - Level Design
