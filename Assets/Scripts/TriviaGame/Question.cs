@@ -6,7 +6,7 @@ public abstract class Question : MonoBehaviour
 {
 
 	[SerializeField] protected TextMesh QuestionText;
-	[SerializeField] protected GameObject[] Answers;
+	[SerializeField] protected Answer[] Answers;
 
 	protected abstract void GenerateQuestion();
 
