@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class MathQuestion : Question
 {
     [SerializeField] private int maxNumber = 10;
+    [SerializeField] private int answerVariance = 2;
 
     // Use this for initialization
     void Start()
@@ -25,9 +28,9 @@ public class MathQuestion : Question
         int operatorType = Random.Range(0, 3);
 
         int answer;
-        
+
         questionText += firstNumber.ToString();
-        
+
         switch (operatorType)
         {
             case 0:
@@ -51,17 +54,16 @@ public class MathQuestion : Question
                 break;
         }
 
-        
+
         questionText += secondNumber.ToString();
         questionText += "=?";
 
         QuestionText.text = questionText;
-        SetAnswers(answer,firstNumber,secondNumber);
+        SetAnswers(answer, firstNumber, secondNumber, operatorType);
     }
 
-    protected void SetAnswers(int answer, int firstNumber, int secondNumber)
+    protected void SetAnswers(int answer, int firstNumber, int secondNumber, int operatorType)
     {
-        
         int correctAnswerIndex = Random.Range(0, Answers.Length);
         for (int i = 0; i < Answers.Length; i++)
         {
@@ -71,9 +73,39 @@ public class MathQuestion : Question
             }
             else
             {
-                switch (Random.Range(0,4))
+                switch (operatorType)
                 {
-                      default:break;  
+                    case 0:
+
+                        Answers[i].AnswerText.text =
+                            ((firstNumber + Random.Range(-answerVariance, answerVariance)) +
+                             (secondNumber + Random.Range(-answerVariance, answerVariance))).ToString();
+                        break;
+                    case 1:
+
+                        Answers[i].AnswerText.text =
+                            ((firstNumber + Random.Range(-answerVariance, answerVariance)) -
+                             (secondNumber + Random.Range(-answerVariance, answerVariance))).ToString();
+                        break;
+                    case 2:
+
+                        Answers[i].AnswerText.text =
+                            ((firstNumber + Random.Range(-answerVariance, answerVariance)) *
+                             (secondNumber + Random.Range(-answerVariance, answerVariance))).ToString();
+                        break;
+                    case 3:
+
+                        Answers[i].AnswerText.text =
+                            ((firstNumber + Random.Range(-answerVariance, answerVariance)) /
+                             (secondNumber + Random.Range(-answerVariance, answerVariance))).ToString();
+                        break;
+                    default:
+                        break;
+                }
+
+                if (Answers[i].AnswerText.text == answer.ToString())
+                {
+                    Answers[i].AnswerText.text = (Int32.Parse(Answers[i].AnswerText.text) + 1).ToString();
                 }
             }
         }
