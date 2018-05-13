@@ -21,6 +21,7 @@ public class LiquidContainer : MonoBehaviour
     private Material liquidMaterial;
 
     private float pourRate = 0.005f;//ToDo: This should be calculated every frame by the pour angle
+    private float fillRate = 0.05f;//Amount to fill every particle collision
 
     // Use this for initialization
     void Start()
@@ -40,27 +41,22 @@ public class LiquidContainer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPourable)
+        if (!isPourable) return;
+        if ((Vector3.Dot(myTransform.up, Vector3.down) > 0) && (currentLevel < emptyLevel)) //todo: vary pour rate
         {
-
-
-            if ((Vector3.Dot(myTransform.up, Vector3.down) > 0)&&(currentLevel<emptyLevel))//todo: vary pour rate
+            emission.enabled = true;
+            currentLevel += pourRate;
+            if (currentLevel > emptyLevel)
             {
-                emission.enabled = true;
-                currentLevel += pourRate;
-                if (currentLevel > emptyLevel)
-                {
-                    currentLevel = emptyLevel;
-                }
+                currentLevel = emptyLevel;
             }
-            else
-            {
-                emission.enabled = false;
-            }
-
-            liquidMaterial.SetFloat("_FillAmount", currentLevel);
+        }
+        else
+        {
+            emission.enabled = false;
         }
 
+        liquidMaterial.SetFloat("_FillAmount", currentLevel);
     }
 
     public void SetPourable(bool state)
@@ -71,5 +67,23 @@ public class LiquidContainer : MonoBehaviour
     public string GetLiquidType()
     {
         return liquidType;
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        LiquidContainer otherContainer = GetComponent<LiquidContainer>();
+
+        if (otherContainer == null) return;
+        
+        string type = otherContainer.GetLiquidType();
+        if (type == liquidType)
+        {
+            currentLevel -= fillRate;
+        }
+        else
+        {
+            //Insert reactions here
+        }
+
     }
 }
