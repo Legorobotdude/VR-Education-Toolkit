@@ -18,11 +18,13 @@ public class Wobble : MonoBehaviour
     float wobbleAmountToAddZ;
     float pulse;
     float time = 0.5f;
+    Transform myTransform;
 
     // Use this for initialization
     void Start()
     {
         rend = GetComponent<Renderer>();
+        myTransform = transform;
     }
     private void Update()
     {
@@ -41,8 +43,8 @@ public class Wobble : MonoBehaviour
         rend.material.SetFloat("_WobbleZ", wobbleAmountZ);
 
         // velocity
-        velocity = (lastPos - transform.position) / Time.deltaTime;
-        angularVelocity = transform.rotation.eulerAngles - lastRot;
+        velocity = (lastPos - myTransform.position) / Time.deltaTime;
+        angularVelocity = myTransform.rotation.eulerAngles - lastRot;
 
 
         // add clamped velocity to wobble
@@ -50,8 +52,8 @@ public class Wobble : MonoBehaviour
         wobbleAmountToAddZ += Mathf.Clamp((velocity.z + (angularVelocity.x * 0.2f)) * MaxWobble, -MaxWobble, MaxWobble);
 
         // keep last position
-        lastPos = transform.position;
-        lastRot = transform.rotation.eulerAngles;
+        lastPos = myTransform.position;
+        lastRot = myTransform.rotation.eulerAngles;
     }
 
 
