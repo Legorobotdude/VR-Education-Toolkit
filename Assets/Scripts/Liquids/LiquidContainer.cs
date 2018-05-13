@@ -15,10 +15,10 @@ public class LiquidContainer : MonoBehaviour
        
     //todo: pour angles, pour rate, liquid type, reaction so library, filling up
 
-    private Transform myTransform;
-    private ParticleSystem.EmissionModule emission;
-    private Renderer liquidRend;
-    private Material liquidMaterial;
+    private Transform _myTransform;
+    private ParticleSystem.EmissionModule _emission;
+    private Renderer _liquidRend;
+    private Material _liquidMaterial;
 
     private float pourRate = 0.005f;//ToDo: This should be calculated every frame by the pour angle
     private float fillRate = 0.05f;//Amount to fill every particle collision
@@ -26,14 +26,14 @@ public class LiquidContainer : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        emission = liquidParticleSystem.emission;
-        emission.enabled = false;
-        myTransform = transform;
-        liquidRend = liquidObject.GetComponent<Renderer>();
-        liquidMaterial = liquidObject.GetComponent<Renderer>().material;
+        _emission = liquidParticleSystem.emission;
+        _emission.enabled = false;
+        _myTransform = transform;
+        _liquidRend = liquidObject.GetComponent<Renderer>();
+        _liquidMaterial = liquidObject.GetComponent<Renderer>().material;
 
         //liquidRend.material.SetColor("_Tint", color); //Doesn't work for some reason
-        liquidRend.material.SetFloat("_FillAmount", currentLevel);
+        _liquidRend.material.SetFloat("_FillAmount", currentLevel);
 
         //liquidMaterial.shader.propertyToId();
     }
@@ -42,9 +42,9 @@ public class LiquidContainer : MonoBehaviour
     void Update()
     {
         if (!isPourable) return;
-        if ((Vector3.Dot(myTransform.up, Vector3.down) > 0) && (currentLevel < emptyLevel)) //todo: vary pour rate
+        if ((Vector3.Dot(_myTransform.up, Vector3.down) > 0) && (currentLevel < emptyLevel)) //todo: vary pour rate
         {
-            emission.enabled = true;
+            _emission.enabled = true;
             currentLevel += pourRate;
             if (currentLevel > emptyLevel)
             {
@@ -53,10 +53,10 @@ public class LiquidContainer : MonoBehaviour
         }
         else
         {
-            emission.enabled = false;
+            _emission.enabled = false;
         }
 
-        liquidMaterial.SetFloat("_FillAmount", currentLevel);
+        _liquidMaterial.SetFloat("_FillAmount", currentLevel);
     }
 
     public void SetPourable(bool state)
