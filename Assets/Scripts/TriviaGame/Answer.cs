@@ -6,6 +6,7 @@ public class Answer : MonoBehaviour
 {
 
 	public TextMesh AnswerText;
+	public bool IsAnswer = false;
 
 	private void Start()
 	{

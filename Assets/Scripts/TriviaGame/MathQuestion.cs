@@ -70,6 +70,7 @@ public class MathQuestion : Question
             if (i == correctAnswerIndex)
             {
                 Answers[i].AnswerText.text = answer.ToString();
+                Answers[i].IsAnswer = true;
             }
             else
             {
