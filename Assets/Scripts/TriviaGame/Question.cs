@@ -8,7 +8,7 @@ public abstract class Question : MonoBehaviour
 	[SerializeField] protected TextMesh QuestionText;
 	[SerializeField] protected Answer[] Answers;
 
-	protected abstract void GenerateQuestion();
+	public abstract void GenerateQuestion();
 
 
 }

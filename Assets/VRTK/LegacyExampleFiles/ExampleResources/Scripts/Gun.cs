@@ -5,8 +5,8 @@
     public class Gun : VRTK_InteractableObject
     {
         private GameObject bullet;
-        [SerializeField]private float bulletSpeed = 1000f;
-        [SerializeField]private float bulletLife = 5f;
+        private float bulletSpeed = 1000f;
+        private float bulletLife = 5f;
 
         public override void StartUsing(VRTK_InteractUse usingObject)
         {

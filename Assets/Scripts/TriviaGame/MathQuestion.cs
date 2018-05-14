@@ -20,7 +20,7 @@ public class MathQuestion : Question
     {
     }
 
-    protected override void GenerateQuestion()
+    public override void GenerateQuestion()
     {
         string questionText = "";
         int firstNumber = Random.Range(0, maxNumber);
@@ -74,6 +74,7 @@ public class MathQuestion : Question
             }
             else
             {
+                Answers[i].IsAnswer = false;
                 switch (operatorType)
                 {
                     case 0:
