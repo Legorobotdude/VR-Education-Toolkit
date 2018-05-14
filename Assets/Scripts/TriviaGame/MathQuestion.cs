@@ -107,7 +107,7 @@ public class MathQuestion : Question
 
                 if (Answers[i].AnswerText.text == answer.ToString())
                 {
-                    Answers[i].AnswerText.text = (Int32.Parse(Answers[i].AnswerText.text) + Random.Range(-answerVariance,answerVariance)).ToString();
+                    Answers[i].AnswerText.text = (Int32.Parse(Answers[i].AnswerText.text) + Random.Range(1,answerVariance)).ToString();
                 }
             }
         }
