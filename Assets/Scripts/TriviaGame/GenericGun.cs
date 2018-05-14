@@ -27,6 +27,11 @@ public class GenericGun : VRTK_InteractableObject
         {
             audioSource.Play();
         }
+
+        if (shot != null)
+        {
+            shot.Play();
+        }
         GameObject bulletClone =
             Instantiate(bullet, bullet.transform.position, bullet.transform.rotation) as GameObject;
         bulletClone.SetActive(true);
