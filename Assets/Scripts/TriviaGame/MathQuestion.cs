@@ -105,9 +105,19 @@ public class MathQuestion : Question
                         break;
                 }
 
-                if (Answers[i].AnswerText.text == answer.ToString())
+                if (Int32.Parse(Answers[i].AnswerText.text) == answer)
                 {
-                    Answers[i].AnswerText.text = (Int32.Parse(Answers[i].AnswerText.text) + Random.Range(1,answerVariance)).ToString();
+                    switch (Random.Range(0,1))
+                    {
+                            case 0:
+                                Answers[i].AnswerText.text = (Int32.Parse(Answers[i].AnswerText.text) + Random.Range(1,answerVariance)).ToString();
+                                break;
+                            case 1:
+                                Answers[i].AnswerText.text = (Int32.Parse(Answers[i].AnswerText.text) - Random.Range(1,answerVariance)).ToString();
+                                break;
+                                
+                    }
+                    
                 }
             }
         }
