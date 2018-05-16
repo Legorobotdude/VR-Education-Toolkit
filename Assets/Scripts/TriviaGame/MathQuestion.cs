@@ -8,6 +8,7 @@ public class MathQuestion : Question
 {
     [SerializeField] private int maxNumber = 10;
     [SerializeField] private int answerVariance = 2;
+    
 
     // Use this for initialization
     void Start()
@@ -60,6 +61,7 @@ public class MathQuestion : Question
 
         QuestionText.text = questionText;
         SetAnswers(answer, firstNumber, secondNumber, operatorType);
+        scoreBoard.IncreaseScore();
     }
 
     protected void SetAnswers(int answer, int firstNumber, int secondNumber, int operatorType)
