@@ -66,40 +66,40 @@ public class MathQuestion : Question
 
     protected void SetAnswers(int answer, int firstNumber, int secondNumber, int operatorType)
     {
-        int correctAnswerIndex = Random.Range(0, Answers.Length);
-        for (int i = 0; i < Answers.Length; i++)
+        int correctAnswerIndex = Random.Range(0, AnswerObjects.Length);
+        for (int i = 0; i < AnswerObjects.Length; i++)
         {
             if (i == correctAnswerIndex)
             {
-                Answers[i].AnswerText.text = answer.ToString();
-                Answers[i].IsAnswer = true;
+                AnswerObjects[i].AnswerText.text = answer.ToString();
+                AnswerObjects[i].IsAnswer = true;
             }
             else
             {
-                Answers[i].IsAnswer = false;
+                AnswerObjects[i].IsAnswer = false;
                 switch (operatorType)
                 {
                     case 0:
 
-                        Answers[i].AnswerText.text =
+                        AnswerObjects[i].AnswerText.text =
                             ((firstNumber + Random.Range(-answerVariance, answerVariance)) +
                              (secondNumber + Random.Range(-answerVariance, answerVariance))).ToString();
                         break;
                     case 1:
 
-                        Answers[i].AnswerText.text =
+                        AnswerObjects[i].AnswerText.text =
                             ((firstNumber + Random.Range(-answerVariance, answerVariance)) -
                              (secondNumber + Random.Range(-answerVariance, answerVariance))).ToString();
                         break;
                     case 2:
 
-                        Answers[i].AnswerText.text =
+                        AnswerObjects[i].AnswerText.text =
                             ((firstNumber + Random.Range(-answerVariance, answerVariance)) *
                              (secondNumber + Random.Range(-answerVariance, answerVariance))).ToString();
                         break;
                     case 3:
 
-                        Answers[i].AnswerText.text =
+                        AnswerObjects[i].AnswerText.text =
                             ((firstNumber + Random.Range(-answerVariance, answerVariance)) /
                              (secondNumber + Random.Range(-answerVariance, answerVariance))).ToString();
                         break;
@@ -107,15 +107,15 @@ public class MathQuestion : Question
                         break;
                 }
 
-                if (Int32.Parse(Answers[i].AnswerText.text) == answer)
+                if (Int32.Parse(AnswerObjects[i].AnswerText.text) == answer)
                 {
                     switch (Random.Range(0,1))
                     {
                             case 0:
-                                Answers[i].AnswerText.text = (Int32.Parse(Answers[i].AnswerText.text) + Random.Range(1,answerVariance)).ToString();
+                                AnswerObjects[i].AnswerText.text = (Int32.Parse(AnswerObjects[i].AnswerText.text) + Random.Range(1,answerVariance)).ToString();
                                 break;
                             case 1:
-                                Answers[i].AnswerText.text = (Int32.Parse(Answers[i].AnswerText.text) - Random.Range(1,answerVariance)).ToString();
+                                AnswerObjects[i].AnswerText.text = (Int32.Parse(AnswerObjects[i].AnswerText.text) - Random.Range(1,answerVariance)).ToString();
                                 break;
                                 
                     }
